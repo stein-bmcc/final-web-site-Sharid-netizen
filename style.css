@@ -4,100 +4,164 @@
 /*  ------------------------------------------------------
     BASIC PAGE STYLING
     Here you can set typography, colors and overall page styling
+
     ------------------------------------------------------ */
-html{
-    font-size: 100%;
-}
-body{
-    /* Here you can set your default font-family, line-height 
-        You can also use max-width and auto margins to limit the width of the page content
-        If you set a background-color here it will be the site background color.
-    */
-
-}
-h1,h2,h3,h4,h5,h6{
-    /* Here you can set the font-family for your headings */
-
-}
-
-/*  ------------------------------------------------------
-    HYPERLINK STYLING 
-    Change the colors here to match the colors you want for your site.
-    ------------------------------------------------------ */ 
-a{
-    color: #1313f1;
-    text-decoration: none;
-    border-bottom: 1px solid #1313f1;
-}
-a:hover{
-    color: #0fa4df;
-    border-bottom: 3px solid #0fa4df;
-}
-a:visited{
-    color: #1313f1;
-    border-bottom: 1px solid #1313f1;
-}
-
-/*  ------------------------------------------------------
-    NAVIGATION STYLING 
-    This turns an unordered list in the nav element to a horizontal menu
-    It also sets the color for the navigation.
-    ------------------------------------------------------ */ 
-nav{
-    background-color: #fef6c6;
-    padding: 10px;
-}
-    nav ul{
-    margin: 0;
-    padding: 0;
-}
-nav li
-{
-    display: inline; /* brings nav elements up next to each other */
-    list-style-type: none; /* removes the bullet points */
-    padding-right: 20px; /* spaces them out from each other. Adjust to suit your needs */
-}
-/* Change this to whatever color you want your nav and visited nav links to be */
-nav li a{
-    color: #1313f1;
-    border-bottom: none;
-}
-nav li a:visited{
-    color: #1313f1;
+    html {
+        font-size: 100%;
+    }
+    h1{
+        margin: 20px auto;
+        padding: 15px;
+        background-color: #cfcbc5; /* Soft cream background */
+        border-radius: 8px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        max-width: 800px;
+        text-align: center;
+        border-radius: 12px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        font-style: italic;
+        font-family: cursive;
+        color: #3d3b3b;
+    }
     
-}
+    h2 {
+        font-family: 'Georgia', serif;
+        font-size: 2.0rem; 
+        color: #e7e5e5;
+        margin-bottom: 15px;
+        text-transform: uppercase; 
+        letter-spacing: 2px; 
+    }
 
-/*  ------------------------------------------------------
-    MEDIA STYLING 
-    These styles affect how images and audio look on the page.
-    ------------------------------------------------------ */ 
-/* Responsive Image Base */
-img,video{
-    max-width: 100%; 
-    height: auto;
-}
+    h3{ 
+        font-family: cursive;
+    
+    }
+    
+     p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #ddd3d3;
+        margin-bottom: 15px;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        width: 60%;
+        margin: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
+    
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #6e3030;
+        color: #c5afaf;
+        margin: 0;
+        padding: 0;
+    }
 
-/* Styling for video embeded with iframe */
-.videoWrapper {
-    position: relative;
-    padding-top: 25px;
-    height: 0;
-    clear:both;
-    outline:1px solid red;
-  }
+    img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más profunda */
+       font-size: medium;
+
+    }
+
+    nav {
+        background-color: #c9c6b5;
+        border-bottom: 2px solid #a09f8c;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 10px 0;
+        font-family: 'Fleur De Leah', sans-serif;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    nav li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+    
+    nav li a {
+        color: #444;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: bold;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+    
+    nav li a:hover {
+        background-color: #f0ede1;
+        color: #353232;
+        box-shadow: 0 2px 5px rgba(14, 13, 13, 0.2);
+        transform: scale(1.05);
+    }
+
+    header div{
+        background-color: #796f6f; /* Fondo del header */
+        border-bottom: 1px solid #9c8585; /* Borde inferior */
+        text-align: center; /* Centra el contenido horizontalmente */
+        padding: 20px 0; /* Espaciado interno superior e inferior */
+        font-family: cursive;
+        font-size: 2.5rem;
+    }
   
-  .videoWrapper.ratio-16-9{
-      padding-bottom: 56.25%; /* 16:9 */
-  }
+    
   
-  .videoWrapper.ratio-4-3{
-      padding-bottom: 75%; /* 4:3 */
-  }
-  
-  .videoWrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+    
+    /* ------------------------------------------------------
+       SECTIONS AND CONTENT
+       Estilos para las secciones y contenido general
+    ------------------------------------------------------ */
+    section {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #978181;
+        background-color: #524c4d;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* ------------------------------------------------------
+       FOOTER
+       Estilos para el pie de página
+    ------------------------------------------------------ */
+    footer {
+        background: #ceb6b6;
+        color: rgb(138, 134, 134);
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    /* ------------------------------------------------------
+       VIDEO & MEDIA STYLING
+       Ajustes para contenido multimedia
+    ------------------------------------------------------ */
+    .videoWrapper {
+        position: relative;
+        padding-top: 25px;
+        height: 0;
+        clear: both;
+    }
+    
+    .videoWrapper.ratio-16-9 {
+        padding-bottom: 56.25%; /* Relación 16:9 */
+    }
+    
+    .videoWrapper.ratio-4-3 {
+        padding-bottom: 75%; /* Relación 4:3 */
+    }
+    
+    .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
